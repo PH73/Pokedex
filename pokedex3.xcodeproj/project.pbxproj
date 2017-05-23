@@ -13,6 +13,12 @@
 		DAF6C6AC1ED44CF300B3F5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF6C6AB1ED44CF300B3F5F4 /* Assets.xcassets */; };
 		DAF6C6AF1ED44CF300B3F5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF6C6AD1ED44CF300B3F5F4 /* LaunchScreen.storyboard */; };
 		DAF6C6B71ED44FBB00B3F5F4 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = DAF6C6B61ED44FBB00B3F5F4 /* pokemon.csv */; };
+		DAF6C6BB1ED450C700B3F5F4 /* pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF6C6BA1ED450C700B3F5F4 /* pokemon.swift */; };
+		DAF6C6BE1ED4878F00B3F5F4 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF6C6BD1ED4878F00B3F5F4 /* PokeCell.swift */; };
+		DAF6C6C01ED491DA00B3F5F4 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF6C6BF1ED491DA00B3F5F4 /* csv.swift */; };
+		DAF6C6C21ED4969500B3F5F4 /* pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAF6C6C11ED4969500B3F5F4 /* pokemon.ttf */; };
+		DAF6C6C71ED4982E00B3F5F4 /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = DAF6C6C61ED4982E00B3F5F4 /* music.png */; };
+		DAF6C6C91ED4983800B3F5F4 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAF6C6C81ED4983800B3F5F4 /* music.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		DAF6C6AE1ED44CF300B3F5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAF6C6B01ED44CF300B3F5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAF6C6B61ED44FBB00B3F5F4 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
+		DAF6C6BA1ED450C700B3F5F4 /* pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pokemon.swift; sourceTree = "<group>"; };
+		DAF6C6BD1ED4878F00B3F5F4 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
+		DAF6C6BF1ED491DA00B3F5F4 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
+		DAF6C6C11ED4969500B3F5F4 /* pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokemon.ttf; sourceTree = "<group>"; };
+		DAF6C6C61ED4982E00B3F5F4 /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
+		DAF6C6C81ED4983800B3F5F4 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,61 @@
 		DAF6C6A31ED44CF200B3F5F4 /* pokedex3 */ = {
 			isa = PBXGroup;
 			children = (
+				DAF6C6B91ED4509C00B3F5F4 /* Model */,
+				DAF6C6BC1ED4876000B3F5F4 /* View */,
+				DAF6C6C31ED496AC00B3F5F4 /* Controller */,
 				DAF6C6A41ED44CF300B3F5F4 /* AppDelegate.swift */,
-				DAF6C6A61ED44CF300B3F5F4 /* ViewController.swift */,
-				DAF6C6A81ED44CF300B3F5F4 /* Main.storyboard */,
+				DAF6C6C41ED496BA00B3F5F4 /* Resources */,
+				DAF6C6C51ED496CE00B3F5F4 /* Util */,
 				DAF6C6AB1ED44CF300B3F5F4 /* Assets.xcassets */,
-				DAF6C6B61ED44FBB00B3F5F4 /* pokemon.csv */,
+				DAF6C6A81ED44CF300B3F5F4 /* Main.storyboard */,
 				DAF6C6AD1ED44CF300B3F5F4 /* LaunchScreen.storyboard */,
 				DAF6C6B01ED44CF300B3F5F4 /* Info.plist */,
 			);
 			path = pokedex3;
+			sourceTree = "<group>";
+		};
+		DAF6C6B91ED4509C00B3F5F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAF6C6BA1ED450C700B3F5F4 /* pokemon.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DAF6C6BC1ED4876000B3F5F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAF6C6BD1ED4878F00B3F5F4 /* PokeCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DAF6C6C31ED496AC00B3F5F4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DAF6C6A61ED44CF300B3F5F4 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DAF6C6C41ED496BA00B3F5F4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DAF6C6C81ED4983800B3F5F4 /* music.mp3 */,
+				DAF6C6C61ED4982E00B3F5F4 /* music.png */,
+				DAF6C6B61ED44FBB00B3F5F4 /* pokemon.csv */,
+				DAF6C6C11ED4969500B3F5F4 /* pokemon.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DAF6C6C51ED496CE00B3F5F4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				DAF6C6BF1ED491DA00B3F5F4 /* csv.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +158,7 @@
 					DAF6C6A01ED44CF200B3F5F4 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 82AHEC7EG9;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -127,10 +186,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF6C6C21ED4969500B3F5F4 /* pokemon.ttf in Resources */,
 				DAF6C6AF1ED44CF300B3F5F4 /* LaunchScreen.storyboard in Resources */,
 				DAF6C6AC1ED44CF300B3F5F4 /* Assets.xcassets in Resources */,
 				DAF6C6B71ED44FBB00B3F5F4 /* pokemon.csv in Resources */,
 				DAF6C6AA1ED44CF300B3F5F4 /* Main.storyboard in Resources */,
+				DAF6C6C91ED4983800B3F5F4 /* music.mp3 in Resources */,
+				DAF6C6C71ED4982E00B3F5F4 /* music.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,8 +203,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF6C6BE1ED4878F00B3F5F4 /* PokeCell.swift in Sources */,
+				DAF6C6BB1ED450C700B3F5F4 /* pokemon.swift in Sources */,
 				DAF6C6A71ED44CF300B3F5F4 /* ViewController.swift in Sources */,
 				DAF6C6A51ED44CF300B3F5F4 /* AppDelegate.swift in Sources */,
+				DAF6C6C01ED491DA00B3F5F4 /* csv.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
