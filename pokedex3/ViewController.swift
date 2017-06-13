@@ -91,7 +91,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let poke: Pokemon!
             
             if inSearchMode {
-                poke = filteredPokemon{indexPath.row}
+                poke = filteredPokemon[indexPath.row]
                 cell.configureCell(poke)
             } else {
                 poke = pokemon[indexPath.row]
