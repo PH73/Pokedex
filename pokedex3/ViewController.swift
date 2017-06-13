@@ -28,6 +28,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collection.delegate = self
         searchBar.delegate = self
         
+        searchBar.returnKeyType= UIReturnKeyType.done
+        
+        
         parsePokemonCSV()
         initAudio()
         
@@ -151,6 +154,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
         }
         
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        // Removes the keyboard after the search button is pressed
+        view.endEditing(true)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
