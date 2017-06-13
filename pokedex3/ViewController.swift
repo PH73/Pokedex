@@ -87,8 +87,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //            let pokemon = Pokemon(name: "Pokemon", pokedexId: indexPath.row)
 //            cell.configureCell(pokemon) //this sets the icons for each cell
             
-            let poke = pokemon[indexPath.row]
-            cell.configureCell(poke)
+            //let poke = pokemon[indexPath.row]
+            let poke: Pokemon!
+            
+            if inSearchMode {
+                poke = filteredPokemon{indexPath.row}
+                cell.configureCell(poke)
+            } else {
+                poke = pokemon[indexPath.row]
+                cell.configureCell(poke)
+                
+            // cell.configureCell(poke)
+                
+            }
             
             return cell
             
@@ -105,6 +116,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
+        if inSearchMode {
+            return filteredPokemon.count
+        }
         
         return pokemon.count //number of Pokemon in the array
     }
