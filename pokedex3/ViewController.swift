@@ -9,12 +9,16 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
     @IBOutlet weak var collection: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     
     var pokemon = [Pokemon]()
+    var filteredPokemon = [Pokemon]()
     var musicPlayer: AVAudioPlayer!
+    var inSearchMode = false
     
     
     override func viewDidLoad() {
@@ -22,6 +26,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         collection.dataSource = self
         collection.delegate = self
+        searchBar.delegate = self
         
         parsePokemonCSV()
         initAudio()
@@ -130,6 +135,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             musicPlayer.play()
             sender.alpha = 1.0
             
+        }
+        
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // The || below mean OR
+        if searchBar.text == nil || searchBar.text == "" {
+         
+            inSearchMode = false
+            collection.reloadData() // this ensures that the original list is reloaded if the search bar is empty of emptied
+            
+        } else {
+            
+            inSearchMode = true
+            let lower = searchBar.text!.lowercased()
+            // In the code below, the $0 refers to the origina list of items
+            // so, the code is filtering the list of original items by those that match the 'lower' constant
+            filteredPokemon = pokemon.filter({$0.name.range(of: lower) != nil})
+            // the code below reloads the collection view with the new data from the filtered list
+            collection.reloadData()
         }
         
     }
