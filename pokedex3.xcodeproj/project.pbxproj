@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DAF5119B1EF1B41300D62A7F /* PokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF5119A1EF1B41300D62A7F /* PokemonDetailVC.swift */; };
 		DAF6C6A51ED44CF300B3F5F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF6C6A41ED44CF300B3F5F4 /* AppDelegate.swift */; };
 		DAF6C6A71ED44CF300B3F5F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF6C6A61ED44CF300B3F5F4 /* ViewController.swift */; };
 		DAF6C6AA1ED44CF300B3F5F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF6C6A81ED44CF300B3F5F4 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DAF5119A1EF1B41300D62A7F /* PokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
 		DAF6C6A11ED44CF200B3F5F4 /* pokedex3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokedex3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF6C6A41ED44CF300B3F5F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAF6C6A61ED44CF300B3F5F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				DAF6C6A61ED44CF300B3F5F4 /* ViewController.swift */,
+				DAF5119A1EF1B41300D62A7F /* PokemonDetailVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				DAF6C6BE1ED4878F00B3F5F4 /* PokeCell.swift in Sources */,
 				DAF6C6BB1ED450C700B3F5F4 /* pokemon.swift in Sources */,
 				DAF6C6A71ED44CF300B3F5F4 /* ViewController.swift in Sources */,
+				DAF5119B1EF1B41300D62A7F /* PokemonDetailVC.swift in Sources */,
 				DAF6C6A51ED44CF300B3F5F4 /* AppDelegate.swift in Sources */,
 				DAF6C6C01ED491DA00B3F5F4 /* csv.swift in Sources */,
 			);
@@ -371,6 +375,7 @@
 				DAF6C6B51ED44CF300B3F5F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
