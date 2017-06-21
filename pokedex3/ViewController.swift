@@ -147,7 +147,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let lower = searchBar.text!.lowercased()
             
             //do the search filter here...
-            filteredPokemon = pokemon.filter(<#T##isIncluded: (Pokemon) throws -> Bool##(Pokemon) throws -> Bool#>)
+            //filteredPokemon = pokemon.filter(<#T##isIncluded: (Pokemon) throws -> Bool##(Pokemon) throws -> Bool#>)
+            filteredPokemon = pokemon.filter
+            
         }
         
     }
