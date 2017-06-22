@@ -30,6 +30,20 @@ class PokemonDetailVC: UIViewController {
         
         nameLbl.text = pokemon.name // This is where the view controller recieves the data that was passed to it
         
+        pokemon.downloadPokemonDetail {
+            
+            // Whatever we run here will only be called after the network call is complete!
+            self.updateUI()
+            
+            
+        }
+    }
+    
+    func updateUI() {
+        attackLbl.text = pokemon.attack
+        defenseLbl.text = pokemon.defense
+        heightLbl.text = pokemon.height
+        weightLbl.text = pokemon.weight
     }
 
 
